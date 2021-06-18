@@ -14,10 +14,10 @@ import javax.swing.JOptionPane;
 
 public class Conexion {
     
-    public final String driver ="com.mysql.cj.jdbc.Driver";
-    public final String url = "jdbc:mysql://localhost/tp2int";
-    public final String user = "root";
-    public final String pass = "";
+        public final String driver ="com.mysql.cj.jdbc.Driver";
+        public final String url = "jdbc:mysql://localhost/tp2int";
+        public final String user = "root";
+        public final String pass = "";
     Connection miConexion = null;   
     
     

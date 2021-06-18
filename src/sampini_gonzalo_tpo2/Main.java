@@ -1,8 +1,6 @@
 
 package sampini_gonzalo_tpo2;
 import controlador.Controlador;
-import modelo.Conexion;
-import java.sql.Connection;
 import modelo.ConsultaMascota;
 import modelo.Mascota;
 import vista.Principal;

@@ -30,6 +30,10 @@ public class Controlador implements ActionListener {
         this.miPrincipal = miPrincipal;
         this.miModelo = miModelo;
         this.miPrincipal.jbGuardar.addActionListener(this);
+        this.miPrincipal.jbLimpiar.addActionListener(this);
+        this.miPrincipal.rbNoAlerg.addActionListener(this);
+        
+        
         
     
     
@@ -39,6 +43,7 @@ public class Controlador implements ActionListener {
         miPrincipal.setVisible(true);
         miPrincipal.setLocationRelativeTo(null);
         miPrincipal.setTitle("Peluqueria de perros");
+       
 
     }
     
@@ -89,10 +94,25 @@ public class Controlador implements ActionListener {
             }
             
         }    
+        
+        if (control.equals(miPrincipal.jbLimpiar)){
+           
+            miPrincipal.jtNcliente.setText(" ");
+            miPrincipal.jtColor.setText(" ");
+            miPrincipal.jtNombre.setText(" ");
+            miPrincipal.jtRaza.setText(" ");
+            miPrincipal.jtObs.setText(" ");
+            miPrincipal.rbEspecial.setSelected(true);
+            miPrincipal.grupoAlergia.clearSelection();
+            miPrincipal.grupoAtencion.clearSelection();
+            
+            
+        
+        }
             
       }
         
-            
+     
             
         
         

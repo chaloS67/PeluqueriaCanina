@@ -1,0 +1,4 @@
+
+  url = "jdbc:mysql://localhost/tp2int";
+  user = "root";
+  pass = "";
