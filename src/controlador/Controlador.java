@@ -10,6 +10,7 @@ import java.awt.event.ActionListener;
 import javax.swing.JOptionPane;
 import modelo.ConsultaMascota;
 import modelo.Mascota;
+import vista.Login;
 import vista.Principal;
 
 /**
@@ -21,22 +22,28 @@ public class Controlador implements ActionListener {
     private Mascota mac;
     private Principal miPrincipal;
     private ConsultaMascota miModelo;
+    private Login miLogin;
     
     
-    public Controlador (Mascota mac,Principal miPrincipal,ConsultaMascota miModelo){
+    public Controlador (Mascota mac,Principal miPrincipal,ConsultaMascota miModelo,Login miLogin){
     
     
         this.mac = mac;
         this.miPrincipal = miPrincipal;
         this.miModelo = miModelo;
         this.miPrincipal.jbGuardar.addActionListener(this);
+        this.miLogin = miLogin;
+        this.miLogin.jbIngresar.addActionListener(this);
+        
         
     
     
     }
     
     public void iniciar(){
-        miPrincipal.setVisible(true);
+        miLogin.setVisible(true);
+       
+       
         miPrincipal.setLocationRelativeTo(null);
         miPrincipal.setTitle("Peluqueria de perros");
 
@@ -88,9 +95,17 @@ public class Controlador implements ActionListener {
            
             }
             
-        }    
+        } 
+        
+        if (control.equals(miLogin.jbIngresar)){
             
-      }
+            
+             miPrincipal.setVisible(true);
+        
+        
+        }
+            
+      } // final 
         
             
             
